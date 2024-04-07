@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="calculator">
+    <div class="display" id="display">
+        <div class="history" id="history">История:</div>
+        <div class="result" id="result">0</div>
+    </div>
+    <div class="buttons">
+        <!-- Общие кнопки -->
+        <button class="button" id="equals" onclick="clearDisplay()">AC</button>
+        <button class="button" id="equals" onclick="backspace()">←</button>
+        <button class="button" id="equalsB" onclick="inputSymbol('(')">(</button>
+        <button class="button" id="equalsB" onclick="inputSymbol(')')">)</button>
+        <button class="button" id="equalsB" onclick="inputSymbol('/')">÷</button>
+        <button class="button" onclick="inputNumber('7')">7</button>
+        <button class="button" onclick="inputNumber('8')">8</button>
+        <button class="button" onclick="inputNumber('9')">9</button>
+        <button class="button" id="equalsB" onclick="inputSymbol('*')">×</button>
+        <button class="button" onclick="inputNumber('4')">4</button>
+        <button class="button" onclick="inputNumber('5')">5</button>
+        <button class="button" onclick="inputNumber('6')">6</button>
+        <button class="button" id="equalsB" onclick="inputSymbol('-')">−</button>
+        <button class="button" onclick="inputNumber('1')">1</button>
+        <button class="button" onclick="inputNumber('2')">2</button>
+        <button class="button" onclick="inputNumber('3')">3</button>
+        <button class="button" id="equalsB" onclick="inputSymbol('+')">+</button>
+        <button class="button" onclick="inputNumber('0')">0</button>
+        <button class="button" id="equalsB" onclick="inputDecimal('.')">.</button>
+        <button class="button" id="equalsB" onclick="calculate()">=</button>
+        
+        <!-- Дополнительные математические функции -->
+        <button class="button" id="equalsG" onclick="inputSymbol('sqrt(')">√x</button>
+        <button class="button" id="equalsG" onclick="inputSymbol('log(')">log</button>
+        <button class="button" id="equalsG"  onclick="inputSymbol('ln(')">ln</button>
+        <button class="button" id="equalsG"  onclick="inputSymbol('sin(')">sin</button>
+        <button class="button" id="equalsG"  onclick="inputSymbol('cos(')">cos</button>
+        <button class="button" id="equalsG"  onclick="inputSymbol('tan(')">tan</button>
+        <button class="button" id="equalsG"  onclick="inputSymbol('^')">^</button>
+        <button class="button" id="equalsG" onclick="inputSymbol('pi')">π</button>
+        <button class="button" id="equalsG" onclick="inputSymbol('e')">e</button>
+        <button class="button" id="equalsG" onclick="inputSymbol('!')">!</button>
+
+        
+    </div>
+
+    <div class="chart-container" style="position: relative; height:40vh; width:80vw">
+        <canvas id="myChart" width="620" height="400"></canvas>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.2.0/math.js"></script>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

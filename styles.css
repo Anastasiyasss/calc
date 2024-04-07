@@ -1,0 +1,90 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f0fc; /* светло-фиолетовый фон */
+}
+
+.calculator {
+    width: 400px;
+    margin: auto;
+}
+
+.display {
+    background-color: #9c27b0; /* розовый фон */
+    color: white;
+    padding: 20px;
+    text-align: right;
+    border-radius: 8px;
+}
+
+.history {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.result {
+    font-size: 24px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.button {
+    background-color: #ba68c8; /* фиолетовый цвет кнопок */
+    border: none;
+    padding: 16px;
+    border-radius: 20px; /* закругленные углы */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .button:hover {
+        background-color: #ab47bc;
+    }
+
+.double {
+    grid-column: span 2;
+}
+
+#equals {
+    background-color: #e91e63; 
+    color: white;
+}
+
+    #equals:hover {
+        background-color: #d81b60; 
+    }
+
+#equalsB {
+    background-color: #ec407a; 
+    color: white;
+}
+
+    #equalsB:hover {
+        background-color: #d81b60; 
+    }
+
+#equalsG {
+    background-color: #9c27b0; 
+    color: white;
+}
+
+    #equalsG:hover {
+        background-color: #8e24aa; 
+    }
